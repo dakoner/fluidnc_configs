@@ -1,0 +1,142 @@
+stepping:
+  engine: I2S_STREAM
+  idle_ms: 255
+  dir_delay_us: 1
+  pulse_us: 4
+  disable_delay_us: 0
+
+
+axes:
+  shared_stepper_disable_pin: NO_PIN
+  x:
+    steps_per_mm: 1600
+    max_rate_mm_per_min: 500
+    acceleration_mm_per_sec2: 25
+    max_travel_mm: 62
+    homing:
+      cycle: 1
+      mpos_mm: 0
+      positive_direction: false
+      seek_mm_per_min: 100
+      feed_mm_per_min: 100
+
+    motor0:
+      limit_neg_pin: gpio.25:pu
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      tmc_2209:
+        uart:
+          txd_pin: gpio.16
+          rxd_pin: gpio.4
+          rts_pin: NO_PIN
+          cts_pin: NO_PIN
+          baud: 115200
+          mode: 8N1
+
+        addr: 0
+        r_sense_ohms: 0.110
+        run_amps: 0.25
+        hold_amps: 0.25
+        microsteps: 32
+        stallguard: 0
+        stallguard_debug: false
+        toff_disable: 0
+        toff_stealthchop: 5
+        toff_coolstep: 3
+        run_mode: StealthChop
+        homing_mode: StealthChop
+        use_enable: false
+        direction_pin: i2so.1
+        step_pin: i2so.2
+        disable_pin: i2so.0
+
+
+  y:
+    steps_per_mm: 1600
+    max_rate_mm_per_min: 500
+    acceleration_mm_per_sec2: 25
+    max_travel_mm: 410
+    homing:
+      cycle: 0
+      mpos_mm: 0
+      positive_direction: false
+      seek_mm_per_min: 3000
+      feed_mm_per_min: 240
+
+    motor0:
+      limit_neg_pin: gpio.26:pu
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      tmc_2209:
+        addr: 1
+        r_sense_ohms: 0.110
+        run_amps: 0.25
+        hold_amps: 0.25
+        microsteps: 32
+        stallguard: 0
+        stallguard_debug: false
+        toff_disable: 0
+        toff_stealthchop: 5
+        toff_coolstep: 3
+        run_mode: StealthChop
+        homing_mode: StealthChop
+        use_enable: false
+        direction_pin: i2so.4
+        step_pin: i2so.5
+        disable_pin: i2so.7
+
+
+  z:
+    steps_per_mm: 400
+    max_rate_mm_per_min: 200
+    acceleration_mm_per_sec2: 25
+    max_travel_mm: 200
+    homing:
+      cycle: 0
+      mpos_mm: 0
+      positive_direction: false
+      seek_mm_per_min: 200
+      feed_mm_per_min: 100
+
+    motor0:
+      limit_neg_pin: gpio.27:pu
+      limit_pos_pin: NO_PIN
+      limit_all_pin: NO_PIN
+      tmc_2209:
+        addr: 2
+        r_sense_ohms: 0.110
+        run_amps: 0.2
+        hold_amps: 0.200
+        microsteps: 8
+        stallguard: 0
+        stallguard_debug: false
+        toff_disable: 0
+        toff_stealthchop: 5
+        toff_coolstep: 3
+        run_mode: StealthChop
+        homing_mode: StealthChop
+        use_enable: false
+        direction_pin: i2so.9
+        step_pin: i2so.10
+        disable_pin: i2so.8
+
+  a:
+    steps_per_mm: 400
+    max_rate_mm_per_min: 200
+    acceleration_mm_per_sec2: 25
+    max_travel_mm: 200
+    homing:
+      cycle: 0
+      mpos_mm: 0
+      positive_direction: false
+      seek_mm_per_min: 200
+      feed_mm_per_min: 100
+
+    motor0:
+      null_motor:
+ 
+
+i2so:
+  bck_pin: gpio.22
+  data_pin: gpio.21
+  ws_pin: gpio.17
