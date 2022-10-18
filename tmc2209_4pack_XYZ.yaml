@@ -10,7 +10,7 @@ axes:
   shared_stepper_disable_pin: NO_PIN
   x:
     steps_per_mm: 1600
-    max_rate_mm_per_min: 500
+    max_rate_mm_per_min: 100
     acceleration_mm_per_sec2: 25
     max_travel_mm: 62
     homing:
@@ -35,8 +35,8 @@ axes:
 
         addr: 0
         r_sense_ohms: 0.110
-        run_amps: 0.25
-        hold_amps: 0.25
+        run_amps: 0.75
+        hold_amps: 0.75
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
@@ -70,8 +70,8 @@ axes:
       tmc_2209:
         addr: 1
         r_sense_ohms: 0.110
-        run_amps: 0.25
-        hold_amps: 0.25
+        run_amps: 0.75
+        hold_amps: 0.75
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
