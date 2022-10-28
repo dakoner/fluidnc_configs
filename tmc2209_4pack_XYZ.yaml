@@ -10,9 +10,10 @@ axes:
   shared_stepper_disable_pin: NO_PIN
   x:
     steps_per_mm: 1600
-    max_rate_mm_per_min: 100
+    max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 25
-    max_travel_mm: 62
+    max_travel_mm: 60
+    soft_limits: true
     homing:
       cycle: 1
       mpos_mm: 0
@@ -24,6 +25,7 @@ axes:
       limit_neg_pin: gpio.25:pu
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
+      hard_limits: false
       tmc_2209:
         uart:
           txd_pin: gpio.16
@@ -35,8 +37,8 @@ axes:
 
         addr: 0
         r_sense_ohms: 0.110
-        run_amps: 0.75
-        hold_amps: 0.75
+        run_amps: 0.25
+        hold_amps: 0.25
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
@@ -53,25 +55,27 @@ axes:
 
   y:
     steps_per_mm: 1600
-    max_rate_mm_per_min: 500
+    max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 25
-    max_travel_mm: 410
+    max_travel_mm: 60
+    soft_limits: true
     homing:
-      cycle: 0
+      cycle: 1
       mpos_mm: 0
       positive_direction: false
       seek_mm_per_min: 3000
       feed_mm_per_min: 240
 
     motor0:
+      hard_limits: false
       limit_neg_pin: gpio.26:pu
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
       tmc_2209:
         addr: 1
         r_sense_ohms: 0.110
-        run_amps: 0.75
-        hold_amps: 0.75
+        run_amps: 0.25
+        hold_amps: 0.25
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
@@ -88,9 +92,9 @@ axes:
 
   z:
     steps_per_mm: 400
-    max_rate_mm_per_min: 200
+    max_rate_mm_per_min: 50
     acceleration_mm_per_sec2: 25
-    max_travel_mm: 200
+    max_travel_mm: 30
     homing:
       cycle: 0
       mpos_mm: 0
@@ -105,16 +109,16 @@ axes:
       tmc_2209:
         addr: 2
         r_sense_ohms: 0.110
-        run_amps: 0.2
-        hold_amps: 0.200
+        run_amps: 0.1
+        hold_amps: 0.100
         microsteps: 8
         stallguard: 0
         stallguard_debug: false
         toff_disable: 0
         toff_stealthchop: 5
         toff_coolstep: 3
-        run_mode: StealthChop
-        homing_mode: StealthChop
+        run_mode: CoolStep
+        homing_mode: CoolStep
         use_enable: false
         direction_pin: i2so.9
         step_pin: i2so.10
