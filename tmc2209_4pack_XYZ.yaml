@@ -12,7 +12,7 @@ axes:
     steps_per_mm: 1600
     max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 25
-    max_travel_mm: 60
+    max_travel_mm: 68
     soft_limits: true
     homing:
       cycle: 1
@@ -57,14 +57,14 @@ axes:
     steps_per_mm: 1600
     max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 25
-    max_travel_mm: 60
+    max_travel_mm: 85
     soft_limits: true
     homing:
       cycle: 1
       mpos_mm: 0
       positive_direction: false
-      seek_mm_per_min: 3000
-      feed_mm_per_min: 240
+      seek_mm_per_min: 100
+      feed_mm_per_min: 100
 
     motor0:
       hard_limits: false
@@ -111,7 +111,7 @@ axes:
         r_sense_ohms: 0.110
         run_amps: 0.1
         hold_amps: 0.100
-        microsteps: 8
+        microsteps: 32
         stallguard: 0
         stallguard_debug: false
         toff_disable: 0
