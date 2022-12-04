@@ -9,9 +9,9 @@ stepping:
 axes:
   shared_stepper_disable_pin: NO_PIN
   x:
-    steps_per_mm: 1600
-    max_rate_mm_per_min: 200
-    acceleration_mm_per_sec2: 25
+    steps_per_mm: 800
+    max_rate_mm_per_min: 1000
+    acceleration_mm_per_sec2: 15
     max_travel_mm: 68
     soft_limits: true
     homing:
@@ -48,15 +48,15 @@ axes:
         run_mode: StealthChop
         homing_mode: StealthChop
         use_enable: false
-        direction_pin: i2so.1
+        direction_pin: i2so.1:low
         step_pin: i2so.2
         disable_pin: i2so.0
 
 
   y:
     steps_per_mm: 1600
-    max_rate_mm_per_min: 200
-    acceleration_mm_per_sec2: 25
+    max_rate_mm_per_min: 1000
+    acceleration_mm_per_sec2: 15
     max_travel_mm: 85
     soft_limits: true
     homing:
@@ -85,7 +85,7 @@ axes:
         run_mode: StealthChop
         homing_mode: StealthChop
         use_enable: false
-        direction_pin: i2so.4
+        direction_pin: i2so.4:low
         step_pin: i2so.5
         disable_pin: i2so.7
 
