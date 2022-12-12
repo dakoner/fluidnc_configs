@@ -54,7 +54,7 @@ axes:
 
 
   y:
-    steps_per_mm: 1600
+    steps_per_mm: 800
     max_rate_mm_per_min: 1000
     acceleration_mm_per_sec2: 15
     max_travel_mm: 85
