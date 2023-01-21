@@ -10,10 +10,10 @@ axes:
   shared_stepper_disable_pin: NO_PIN
   x:
     steps_per_mm: 800
-    max_rate_mm_per_min: 1000
+    max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 15
     max_travel_mm: 68
-    soft_limits: true
+    soft_limits: false
     homing:
       cycle: 1
       mpos_mm: 0
@@ -55,10 +55,10 @@ axes:
 
   y:
     steps_per_mm: 800
-    max_rate_mm_per_min: 1000
+    max_rate_mm_per_min: 200
     acceleration_mm_per_sec2: 15
     max_travel_mm: 85
-    soft_limits: true
+    soft_limits: false
     homing:
       cycle: 1
       mpos_mm: 0
