@@ -13,7 +13,7 @@ axes:
   
   x:
     steps_per_mm: 800
-    max_rate_mm_per_min: 5000
+    max_rate_mm_per_min: 100
     acceleration_mm_per_sec2: 25
     max_travel_mm: 1000
     soft_limits: false
@@ -28,8 +28,8 @@ axes:
       feed_scaler: 1.100
     
     motor0:
-      limit_pos_pin: gpio.32:low:pu
-      #limit_pos_pin: NO_PIN
+      #limit_pos_pin: gpio.32:low:pu
+      limit_pos_pin: NO_PIN
       tmc_2130:
         direction_pin: gpio.26
         step_pin: gpio.12
@@ -46,29 +46,11 @@ axes:
         run_mode: StealthChop
         homing_mode: StealthChop
         use_enable: false
-    motor1:
-      limit_pos_pin: gpio.4:low:pu
-      tmc_2130:
-        direction_pin: gpio.25:low
-        step_pin: gpio.14
-        cs_pin: gpio.16
-        r_sense_ohms: 0.110
-        run_amps: 0.250
-        hold_amps: 0.250
-        microsteps: 32
-        stallguard: 0
-        stallguard_debug: false
-        toff_disable: 0
-        toff_stealthchop: 5
-        toff_coolstep: 3
-        run_mode: StealthChop
-        homing_mode: StealthChop
-        use_enable: false
 
 
   y:
-    steps_per_mm: 3200
-    max_rate_mm_per_min: 400
+    steps_per_mm: 800
+    max_rate_mm_per_min: 100
     acceleration_mm_per_sec2: 25
     max_travel_mm: 1000
     soft_limits: false
@@ -85,8 +67,6 @@ axes:
     motor0:
       null_motor:
 
-    motor1:
-      null_motor:
 
   z:
     steps_per_mm: 400
