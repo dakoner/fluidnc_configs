@@ -17,17 +17,29 @@ axes:
   shared_stepper_disable_pin: NO_PIN
 
   x:
+<<<<<<< HEAD
     steps_per_mm: 5333
     max_rate_mm_per_min: 1200
     acceleration_mm_per_sec2: 150
     max_travel_mm: 100
     soft_limits: true
+=======
+    steps_per_mm: 6400.000
+    max_rate_mm_per_min: 500.000
+    acceleration_mm_per_sec2: 150.000
+    max_travel_mm: 50
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
     homing:
       cycle: 1
       mpos_mm: 0
       positive_direction: false
+<<<<<<< HEAD
       seek_mm_per_min: 500
       feed_mm_per_min: 250
+=======
+      seek_mm_per_min: 100
+      feed_mm_per_min: 100
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
 
     motor0:
       limit_neg_pin: gpio.36:low
@@ -37,8 +49,13 @@ axes:
         uart_num: 1
         addr: 0
         r_sense_ohms: 0.110
+<<<<<<< HEAD
         run_amps: 0.5
         hold_amps: 0.1
+=======
+        run_amps: 1.000
+        hold_amps: 0.500
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
@@ -53,30 +70,51 @@ axes:
         disable_pin: i2so.0
 
   y:
+<<<<<<< HEAD
     steps_per_mm: 5333
     max_rate_mm_per_min: 1200
     acceleration_mm_per_sec2: 150
     max_travel_mm: 80
     soft_limits: true
 
+=======
+    steps_per_mm: 6400
+    max_rate_mm_per_min: 500
+    acceleration_mm_per_sec2: 100
+    max_travel_mm: 50
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
     homing:
       cycle: 1
       mpos_mm: 0
       positive_direction: false
+<<<<<<< HEAD
       seek_mm_per_min: 500
       feed_mm_per_min: 250
 
     motor0:
       limit_neg_pin: gpio.34:low
+=======
+      seek_mm_per_min: 3000
+      feed_mm_per_min: 240
+
+    motor0:
+      limit_neg_pin: gpio.39:low
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
       tmc_2209:
         uart_num: 1
         addr: 1
         r_sense_ohms: 0.110
+<<<<<<< HEAD
         run_amps: 0.5
         hold_amps: 0.1
         microsteps: 32
+=======
+        run_amps: 1.000
+        hold_amps: 0.500
+        microsteps: 16
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
         stallguard: 0
         stallguard_debug: false
         toff_disable: 0
@@ -90,35 +128,58 @@ axes:
         disable_pin: i2so.7
 
   z:
+<<<<<<< HEAD
     steps_per_mm: 6400
     max_rate_mm_per_min: 100
     acceleration_mm_per_sec2: 55
     max_travel_mm: 200
     homing:
       cycle: -1
+=======
+    steps_per_mm: 400
+    max_rate_mm_per_min: 200
+    acceleration_mm_per_sec2: 25
+    max_travel_mm: 200
+    homing:
+      cycle: 2
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
       mpos_mm: 0
       positive_direction: false
       seek_mm_per_min: 200
       feed_mm_per_min: 100
 
     motor0:
+<<<<<<< HEAD
       limit_neg_pin: gpio.39:low
+=======
+      limit_neg_pin: gpio.34:low
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
       limit_pos_pin: NO_PIN
       limit_all_pin: NO_PIN
       tmc_2209:
         uart_num: 1
         addr: 2
         r_sense_ohms: 0.110
+<<<<<<< HEAD
         run_amps: 0.25
         hold_amps: 0.1
+=======
+        run_amps: 1.000
+        hold_amps: 0.500
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
         microsteps: 32
         stallguard: 0
         stallguard_debug: false
         toff_disable: 0
         toff_stealthchop: 5
         toff_coolstep: 3
+<<<<<<< HEAD
         run_mode: CoolStep
         homing_mode: CoolStep
+=======
+        run_mode: StealthChop
+        homing_mode: StealthChop
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
         use_enable: false
         direction_pin: i2so.9
         step_pin: i2so.10
@@ -130,7 +191,11 @@ axes:
     acceleration_mm_per_sec2: 25
     max_travel_mm: 200
     homing:
+<<<<<<< HEAD
       cycle: -1
+=======
+      cycle: 2
+>>>>>>> 04fe5b17d38a884084685ebd3d80676566db1758
       mpos_mm: 0
       positive_direction: false
       seek_mm_per_min: 200
